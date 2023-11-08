@@ -1,0 +1,12 @@
+.parentContainer{
+    height: 40vh;
+    display: inline;
+    
+    
+}   
+.parentContainer form input {
+  margin-top:1rem ;
+  margin-bottom: 1rem;
+
+}
+

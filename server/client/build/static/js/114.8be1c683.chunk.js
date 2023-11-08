@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkclient=self.webpackChunkclient||[]).push([[114],{4114:function(e,t,n){n.r(t);n(2791);var u=n(7689),l=n(184);t.default=function(){var e=(0,u.s0)();return!!localStorage.getItem("token")?(0,l.jsx)(u.j3,{}):(e("/auth"),null)}}}]);
+//# sourceMappingURL=114.8be1c683.chunk.js.map
