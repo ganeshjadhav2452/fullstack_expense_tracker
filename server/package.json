@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node server.js",
+    "start": "node app.js",
     "dev": "concurrently \"npm start\" \"npm run client\"",
     "build": "npm install"
   },

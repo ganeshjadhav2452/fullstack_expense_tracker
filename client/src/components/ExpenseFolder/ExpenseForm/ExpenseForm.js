@@ -182,7 +182,7 @@ function ExpenseForm() {
 
   return (
     <Fragment>
-      <nav class={`navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-between ${darkMode && darkStyle}`}>
+      <nav className={`navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-between ${darkMode && darkStyle}`}>
 
 
         <div>
@@ -214,7 +214,7 @@ function ExpenseForm() {
       <div className='container-fluid bg-warning parentContainer' >
 
 
-        <div class={`text-center pt-5 ${darkMode ? darkStyle : 'bg-warning'}`}>
+        <div className={`text-center pt-5 ${darkMode ? darkStyle : 'bg-warning'}`}>
           <img src="https://i.ibb.co/8cDgdFX/Logo.png" alt="network-logo" width="72" height="72" />
           <h2>Star Expense Tracker</h2>
           <p>
@@ -222,41 +222,41 @@ function ExpenseForm() {
           </p>
         </div>
 
-        <div class="card">
+        <div className="card">
 
-          <div class={`card-body ${darkMode ? darkStyle : 'bg-warning'} `}>
+          <div className={`card-body ${darkMode ? darkStyle : 'bg-warning'} `}>
 
             <form onSubmit={(e) => {
               e.preventDefault();
               setSubmitClicked(!submitClicked)
-            }} id="bookingForm" action="#" method="" class="needs-validation" novalidate autoComplete="on">
+            }} id="bookingForm" action="#" method="" class="needs-validation" noValidate autoComplete="on">
 
-              <div class="form-group">
-                <label for="inputName">Description</label>
-                <input value={formValues.title} onChange={titleChangeHandler} type="text" class="form-control" id="inputName" name="name" placeholder="Description" required />
+              <div className="form-group">
+                <label htmlFor="inputName">Description</label>
+                <input value={formValues.title} onChange={titleChangeHandler} type="text" className="form-control" id="inputName" name="name" placeholder="Description" required />
 
               </div>
-              <div class="form-row">
+              <div className="form-row">
 
                 <div className='form-group innerDivs col-md-4'>
-                  <label for="inputAmount">Amount</label>
-                  <input value={formValues.amount} onChange={amountChangeHandler} type="number" class="form-control" id="inputAmount" name="Amount" placeholder="Amount" required />
+                  <label htmlFor="inputAmount">Amount</label>
+                  <input value={formValues.amount} onChange={amountChangeHandler} type="number" className="form-control" id="inputAmount" name="Amount" placeholder="Amount" required />
                 </div>
 
 
 
 
 
-                <div class="form-group innerDivs col-md-4">
-                  <label for="inputDate">Date</label>
-                  <input value={formValues.date} onChange={dateChangeHandler} type="date" class="form-control" id="inputDate" name="date" required />
+                <div className="form-group innerDivs col-md-4">
+                  <label htmlFor="inputDate">Date</label>
+                  <input value={formValues.date} onChange={dateChangeHandler} type="date" className="form-control" id="inputDate" name="date" required />
 
                 </div>
 
-                <div class="mt-3 form-group innerDivs col-md-4">
+                <div className="mt-3 form-group innerDivs col-md-4">
                   <label>Start Time</label>
-                  <div class="d-flex flex-row justify-content-between align-items-center">
-                    <select value={formValues.category} onChange={categoryChangeHandler} class="form-control selection mr-1" id="category" required >
+                  <div className="d-flex flex-row justify-content-between align-items-center">
+                    <select value={formValues.category} onChange={categoryChangeHandler} className="form-control selection mr-1" id="category" required >
                       <option value="" disabled selected> Expense Category</option>
                       <option >Food</option>
                       <option >Shoping</option>
@@ -268,7 +268,7 @@ function ExpenseForm() {
                     </select>
 
 
-                    <select value={formValues.debitOrCredit} onChange={debitOrCreditChangeHandler} class="selection form-control  mr-1" id="category" required>
+                    <select value={formValues.debitOrCredit} onChange={debitOrCreditChangeHandler} className="selection form-control  mr-1" id="category" required>
 
                       <option   >None</option>
                       <option >Debit</option>
@@ -283,7 +283,7 @@ function ExpenseForm() {
                 </div>
               </div>
               {/* {!isEdit && <button class="btn btn-warning border border-dark btn-block col-lg-3 m-auto" type="submit" >Add Expense</button>} */}
-              <button class="btn btn-warning border border-dark btn-block col-lg-3 m-auto" type="submit" >Add Expense</button>
+              <button className="btn btn-warning border border-dark btn-block col-lg-3 m-auto" type="submit" >Add Expense</button>
 
               {/* {isEdit &&  <button class="btn btn-info border border-dark btn-block col-lg-3 m-auto" type="submit" >Update Expense</button>} */}
             </form>

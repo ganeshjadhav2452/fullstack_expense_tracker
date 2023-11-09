@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useCallback, useEffect, useRef, useState } from 'react'
 import './ExpenseGenerator.css'
 import LoaderEl from '../../UI/Loader/Loader'
-import { useNavigate } from 'react-router-dom'
+
 import { fetchDataFromServer } from '../../../redux/slices/initalExpenseData'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
@@ -12,7 +12,7 @@ const ExpenseItem = lazy(() => import('./ExpenseItem/ExpenseItem'))
 
 
 function ExpenseGenerator() {
-    const navigate = useNavigate()
+
     const [credit, setCredit] = useState(0)
     const [debit, setDebit] = useState(0)
     let { data, noExpense, totalExpenses, limit } = useSelector((state) => state.expenseData)
@@ -78,7 +78,7 @@ function ExpenseGenerator() {
             <div className={`screen-600 container d-flex align-items-center ${darkMode ? darkStyle : 'bg-warning '}  p-3 `} style={{ borderRadius: '0.5rem' }}>
 
 
-                <div class="screen-600  table-wrapper mr-3 w-75 d-flex flex-column align-items-center">
+                <div className="screen-600  table-wrapper mr-3 w-75 d-flex flex-column align-items-center">
                     <h2 className={`${darkMode ? 'text-warning ' : 'text-dark border border-dark'} fw-bold h3`}>Expense Table</h2>
                     <table className={`fl-table ${darkMode ? darkStyle : ''}`}>
                         <thead>
@@ -105,21 +105,21 @@ function ExpenseGenerator() {
                     </table>
                     {noExpense && <h4 className='alert alert-danger'>No Expenses Avilable Please Add Some...</h4>}
                     <nav aria-label="Page navigation example " style={{ marginTop: '2rem' }}>
-                        <ul class="pagination">
+                        <ul className="pagination">
 
                             {
                                 totalPageCalculator(totalExpenses, limit).map((num) => {
                                     pageNum = num
-                                    return <li key={num} onClick={() => loadPageClickHandler(num, pageLimit)} class="page-item"><button class="page-link">{num}</button></li>
+                                    return <li key={num} onClick={() => loadPageClickHandler(num, pageLimit)} className="page-item"><button className="page-link">{num}</button></li>
                                 })
                             }
 
                             <div className='d-flex flex-column' style={{ marginLeft: '1rem', marginTop: '-1rem' }} >
-                                <label for="selectLimit">Select Limit</label>
-                                <select id='selectLimit' class="page-item " ref={limitRef} >
-                                    <option class="page-link" value={5}>5</option>
-                                    <option class="page-link" value={10}>10</option>
-                                    <option class="page-link" value={15}> 15</option>
+                                <label htmlFor="selectLimit">Select Limit</label>
+                                <select id='selectLimit' className="page-item " ref={limitRef} >
+                                    <option className="page-link" value={5}>5</option>
+                                    <option className="page-link" value={10}>10</option>
+                                    <option className="page-link" value={15}> 15</option>
                                 </select>
                             </div>
 
